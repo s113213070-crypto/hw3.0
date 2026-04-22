@@ -2,39 +2,39 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>作業三 3D 模型展示選單</title>
+    <title>作業三 3D 展示整合</title>
     <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
     <style>
-        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .section { margin-bottom: 50px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        babylon { width: 100%; height: 400px; display: block; }
+        body { font-family: sans-serif; padding: 20px; }
+        .section { margin-bottom: 50px; border-bottom: 1px solid #ccc; padding-bottom: 20px; }
+        iframe { width: 100%; height: 400px; border: none; }
+        babylon { width: 100%; height: 400px; }
     </style>
 </head>
 <body>
 
-    <h1>作業三：網站模型展示</h1>
+    <h1>作業三：3D 模型網站展示</h1>
 
     <div class="section">
-        <h2>1. Sketchfab 展示</h2>
-        <div style="height:400px;">
-            <p>(請將你在 Sketchfab 複製的 Embed 程式碼貼在此處)</p>
+        <h2>1. Sketchfab 展示區</h2>
+        <div class="sketchfab-embed-wrapper">
+            <iframe title="Mixamo" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/26ab1a0940214b2b82351017e4587154/embed"></iframe>
         </div>
     </div>
 
     <div class="section">
         <h2>2. Babylon Viewer Basic</h2>
-        <babylon extends="minimal" model="你的檔名.glb"></babylon>
+        <babylon extends="minimal" model="Mixamo.glb"></babylon>
     </div>
 
     <div class="section">
         <h2>3. Babylon Viewer Select</h2>
-        <p>展示模型 (Select)：</p>
-        <babylon model="你的檔名.glb" templates.main.params.fill-container="true"></babylon>
+        <babylon model="Mixamo.glb"></babylon>
     </div>
 
     <div class="section">
         <h2>4. Babylon Viewer Navbar</h2>
-        <babylon model="你的檔名.glb" templates.nav-bar.params.visibility="visible"></babylon>
+        <babylon model="Mixamo.glb" templates.nav-bar.params.visibility="visible"></babylon>
     </div>
 
 </body>
